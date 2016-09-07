@@ -1,0 +1,59 @@
+<div ng-controller="Angular_Fire">
+<h1>Angular Fire </h1>
+<form name="frm" >
+ <div class="form-group">
+    <label for="exampleInputEmail1">Enter Your Name:</label>
+    <input type="text" class="form-control" id="exampleInputName" placeholder="Name" ng-model="Name" name="Name" ng-minlength="5" ng-maxlength="15" pattern=[a-zA-Z]+ required>
+  </div>
+
+   <div ng-messages="frm.Name.$error" role="alert" class="my-messages" ng-if="frm.Name.$dirty" class="ngMessagesClass">
+    <div ng-message="required" class="some-message"class="ngMessagesClass">Please enter a value for this field.</div>
+    <div ng-message="pattern"class="ngMessagesClass">This field must be a valid Correct Name.</div>
+    <div ng-message="maxlength"class="ngMessagesClass">This field can be at most 15 characters long.</div>
+     <div ng-message="minlength"class="ngMessagesClass">This field can be at min 5 characters be filed.</div>
+     
+  </div>
+
+
+	 <div class="form-group">
+    <label for="exampleInputEmail1">Enter Your Age:</label>
+    <input type="number" class="form-control" id="exampleInputName" placeholder="age" ng-model="age" name="age" ng-minlength="1" ng-maxlength="2" min="1" max="99" required>
+  </div>
+
+   <div ng-messages="frm.age.$error" role="alert" class="my-messages" ng-if="frm.age.$dirty" class="ngMessagesClass">
+    <div ng-message="required" class="some-message"class="ngMessagesClass">Please enter a value for this field.</div>
+    <div ng-message="number"class="ngMessagesClass">This field must be a valid Number only.</div>
+    <div ng-message="maxlength"class="ngMessagesClass">This field can be at most 2 characters long.</div>
+     <div ng-message="minlength"class="ngMessagesClass">This field can be at min 1 characters be filed.</div>
+      <div ng-message="min"class="ngMessagesClass">This field can be at start with 1 age.</div>
+     
+  </div>
+
+	
+  <button type="submit" ng-disabled="frm.$invalid" class="btn btn-default" ng-click="save_details()">Submit</button>
+
+
+
+
+
+</form>
+  <table class="table table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+         <th>Remove_Data</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="Detail in Details">
+        <td>{{Detail.Name}}</td>
+        <td>{{Detail.age}}</td>
+		 <td><a class="btn btn-danger" ng-click="remove_Details($index)">Delete</td>
+      </tr>
+    
+      
+    </tbody>
+  </table>
+
+</div>

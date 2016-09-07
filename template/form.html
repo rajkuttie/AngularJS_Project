@@ -1,0 +1,144 @@
+<form name="frm" ng-controller="form_controller">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Email" ng-model="Email " name="Email" ng-minlength="5" ng-pattern="/^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$/" ng-maxlength="25" required reconsider>
+  </div>
+
+
+ <div ng-messages="frm.Email.$error" role="alert" class="my-messages"           ng-if="frm.Email.$dirty" class="ngMessagesClass" style="color:maroon">
+    <div ng-message="required" class="some-message"class="ngMessagesClass">Please enter a value for this field.</div>
+    <div ng-message="email"class="ngMessagesClass">This field must be a valid email address.</div>
+    <div ng-message="maxlength"class="ngMessagesClass">This field can be at most 15 characters long.</div>
+     <div ng-message="minlength"class="ngMessagesClass">This field can be at min 5 characters be filed.</div>
+
+     <div ng-message="pattern"class="ngMessagesClass">this is not a email id</div>
+     
+  </div>
+
+
+<div class="form-group">
+    <label for="exampleInputEmail1">Enter Your Name:</label>
+    <input type="text" class="form-control" id="exampleInputName" placeholder="Name" ng-model="Name" name="Name" ng-minlength="5" ng-maxlength="15" ng-pattern="/^[a-zA-Z\s]*$/"  required reconsider>
+  </div>
+
+   <div ng-messages="frm.Name.$error" role="alert" class="my-messages" ng-if="frm.Name.$dirty" class="ngMessagesClass" style="color:maroon" >
+    <div ng-message="required" class="some-message"class="ngMessagesClass">Please enter a value for this field.</div>
+    <div ng-message="pattern"class="ngMessagesClass">This field must be a valid Correct Name.</div>
+    <div ng-message="maxlength"class="ngMessagesClass">This field can be at most 15 characters long.</div>
+     <div ng-message="minlength"class="ngMessagesClass">This field can be at min 5 characters be filed.</div>
+     
+  </div>
+
+
+   <div class="form-group">
+    <label for="exampleInputEmail1">Enter Your Age:</label>
+    <input type="number" class="form-control" id="exampleInputName" placeholder="age" ng-model="age" name="age" ng-minlength="1" ng-maxlength="2" min="1" max="99" required reconsider>
+  </div>
+
+   <div ng-messages="frm.age.$error" role="alert" class="my-messages" ng-if="frm.age.$dirty" class="ngMessagesClass" style="color:maroon">
+    <div ng-message="required" class="some-message"class="ngMessagesClass">Please enter a value for this field.</div>
+    <div ng-message="number"class="ngMessagesClass">This field must be a valid Number only.</div>
+    <div ng-message="maxlength"class="ngMessagesClass">This field can be at most 2 characters long.</div>
+     <div ng-message="minlength"class="ngMessagesClass">This field can be at min 1 characters be filed.</div>
+      <div ng-message="min"class="ngMessagesClass">This field can be at start with 1 age.</div>
+     
+  </div>
+
+
+   <div class="form-group">
+    <label for="exampleInputEmail1">Enter Your Age:</label>
+    <input type="date" class="form-control" id="exampleInputName" placeholder="age" ng-model="DOB" name="DOB"required reconsider>
+  </div>
+
+<div ng-messages="frm.DOB.$error" role="alert" class="my-messages" ng-if="frm.DOB.$dirty" class="ngMessagesClass" style="color:maroon">
+    <div ng-message="required" class="some-message"class="ngMessagesClass">Please enter a value for this field.</div>
+    <div ng-message="date"class="ngMessagesClass">This field must be a valid Date only.</div>
+
+     
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" ng-model="password" name="password" ng-minlength="5" 
+    ng-maxlength="15" required reconsider>
+  </div>
+
+ <div ng-messages="frm.password.$error" role="alert" ng-if="frm.password.$dirty"class="ngMessagesClass" style="color:maroon">
+    <div ng-message="required"class="ngMessagesClass">Please enter a value for this field.</div>
+    <div ng-message="maxlength"class="ngMessagesClass">This field can be at most 15 characters long.</div>
+     <div ng-message="minlength"class="ngMessagesClass">This field can be at min 5 characters be filed.</div>
+  </div>
+
+<div class="form-group">
+    <label for="exampleInputPassword1">Conform Password:</label>
+    <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Conform Password" ng-model="password2" name="password2" ng-pattern="password" required ng-minlength="5" 
+    ng-maxlength="15" reconsider>
+  </div>
+
+
+ <div ng-messages="frm.password2.$error" role="alert" ng-if="frm.password2.$dirty" class="ngMessagesClass" style="color:maroon"> 
+        <div ng-message="pattern"class="ngMessagesClass">Password is Not match</div>
+         <div ng-message="required"class="ngMessagesClass">Please enter a conform password.</div>
+        <div ng-message="maxlength"class="ngMessagesClass">Password is Not match</div>
+      <div ng-message="minlength"class="ngMessagesClass">Password is Not match</div>
+
+  </div>
+
+<div class="form-group">
+    <label for="exampleInputEmail1">Enter Your RationCard:(01/G/0782952)</label>
+    <input type="text" class="form-control" id="exampleInputName" placeholder="01/G/0782952" ng-model="RationCard" name="RationCard"  mask='dd/A/ddddddd' required reconsider >
+  </div>
+
+ <div ng-messages="frm.RationCard.$error" role="alert" ng-if="frm.RationCard.$dirty" class="ngMessagesClass" style="color:maroon"> 
+        <div ng-message="mask"class="ngMessagesClass">RationCard is should be comes (01/G/0782952) this format</div>
+         <div ng-message="required" class="ngMessagesClass">RationCard is must fill</div>
+      
+
+  </div>
+
+
+<input type="number" min="" max="{{max}}" ng-model="min" name="">
+<input type="number" min="{{min}}" max="" ng-model="max" name="">
+
+
+  <button type="submit" ng-disabled="frm.$invalid" class="btn btn-default" ng-click="form_details()" >Submit</button>
+</form>
+
+<input type="text" class="normal" name="Name" size="20" maxlength="20" style="text-transform:uppercase" /> 
+
+<!-- .directive('validNumber', function() {
+  return {
+    require: '?ngModel',
+    link: function(scope, element, attrs, ngModelCtrl) {
+      if(!ngModelCtrl) {
+        return; 
+      }
+      
+      ngModelCtrl.$parsers.push(function(val) {
+        var clean = val.replace( /[^0-9]+/g, '');
+        if (val !== clean) {
+          ngModelCtrl.$setViewValue(clean);
+          ngModelCtrl.$render();
+        }
+        return clean;
+      });
+      
+      element.bind('keypress', function(event) {
+        if(event.keyCode === 32) {
+          event.preventDefault();
+        }
+      });
+    }
+  };
+}); -->

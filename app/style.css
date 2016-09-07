@@ -1,0 +1,119 @@
+
+
+.view-animate {
+  padding:10px;
+}
+
+.view-animate.ng-enter, .view-animate.ng-leave {
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+
+  display:block;
+  width:100%;
+
+  position:absolute;
+
+}
+
+.view-animate.ng-enter {
+  left:100%;
+}
+.view-animate.ng-enter.ng-enter-active {
+  left:0;
+}
+.view-animate.ng-leave.ng-leave-active {
+  left:-100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.content {
+	-webkit-transition: -webkit-transform 1s;
+	-webkit-perspective: 600px;
+}
+.content .flip {
+
+	-webkit-transition: all 1s ease-in-out;
+}
+.content .flip.ng-enter {
+    -webkit-transform: rotateY(-180deg);
+}
+.content .flip.ng-enter-active {
+	-webkit-transform: rotateY(0deg);
+}
+.content .flip.ng-leave {
+	-webkit-transform: rotateY(0deg);
+}
+.content .flip.ng-leave-active {
+	-webkit-transform: rotateY(180deg);
+}
+input.ng-invalid.ng-dirty{
+	border-color: red;
+}
+input.ng-valid{
+	border-color: green;
+}
+.my-messages {
+  transition:1s linear all;
+}
+.my-messages.ng-active {
+  // messages are visible
+}
+.my-messages.ng-inactive {
+  // messages are hidden
+}
+
+.container-fluid{
+	background-color: #ED2F31;
+}
+.done{
+	text-decoration: line-through;color: red;
+}
+body{
+	background-color: #F4C5AC;
+}
+
+@import "//fonts.googleapis.com/css?family=Bangers";
+body {
+  margin: 0;
+}
+
+.wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  background: black;
+}
+
+.time-to {
+  text-align: center;
+  font-family: Bangers;
+  color: white;
+  font-size: 35px;
+  letter-spacing: 2px;
+}
+.time-to span {
+  display: block;
+  font-size: 80px;
+  color: red;
+}

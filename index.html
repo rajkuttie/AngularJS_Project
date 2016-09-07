@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<!-- Bootstrap lib  -->
+<link rel="stylesheet" href="Lib/bootstrap.min.css" >
+<link rel="stylesheet" href="Lib/bootstrap-theme.min.css">
+
+<!-- Addtional CSS -->
+
+<link rel="stylesheet" type="text/css" href="app/style.css">
+
+<!-- Angularjs Lib Files -->
+<script type="text/javascript" src="Lib/angular.min.js"></script>
+<script type="text/javascript" src="Lib/angular-route.min.js"></script>
+<script type="text/javascript" src="Lib/angular-animate.min.js"></script>
+<script type="text/javascript" src="Lib/angular-animate.min.js"></script>
+<script type="text/javascript" src="Lib/angular-messages.min.js"></script>
+<script type="text/javascript" src="Lib/firebase.js"></script>
+<script type="text/javascript" src="Lib/annyang.min.js"></script>
+<script type="text/javascript" src="Lib/ngMask.min.js"></script>
+<script type="text/javascript" src="Lib/wizValidation.min.js"></script>
+<!-- Addtional Js file -->
+
+<script type="text/javascript" src="app/app.js"></script>
+
+
+<title>
+		Rajkumar Projects
+</title>
+
+<?php include("include/css.php"); ?>
+<?php include("include/js.php"); ?>
+</head>
+<body>
+<div ng-include="'include/header.html'"></div>
+
+<div class="view-animate-container">
+<div ng-view class="view-animate">
+</div>
+</div>
+   
+
+
+
+</body>
+
+</html>

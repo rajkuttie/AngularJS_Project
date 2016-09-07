@@ -1,0 +1,7 @@
+<input type="text" ng-model="color">
+<div ng-switch on="color">
+		<div ng-switch-when="red" style="color:{{color}}"><h1>RED</h1> </div>
+		<div ng-switch-when="blue" style="color:{{color}}"><h1>blue</h1> </div>
+		<div ng-switch-when="green" style="color:{{color}}"><h1>green</h1> </div>
+		<div ng-switch-default style="color:{{color}}"><h1>Color</h1> </div>
+</div>

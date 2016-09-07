@@ -1,0 +1,9 @@
+<h1>This is Blog Page</h1>
+<div ng-controller="blog_controller">
+<div class="col-lg-4" ng-repeat="blog in blogs">
+{{raj}}
+          <h2>{{blog.heading}}</h2>
+          <p class="text-danger">{{blog.body | limitTo:75 }}
+          <p><a class="btn btn-primary" href="#/Blog/{{blogs.indexOf(blog)}}" role="button">View details »</a></p>
+</div>
+</div>

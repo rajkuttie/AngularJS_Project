@@ -1,0 +1,36 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/css/style.css">
+	<title>firebase Connection</title>
+	
+</head>
+<body class="container mtop">
+<div class="jumbotron row">
+<h2>
+Fire Base Connection : <h2 id="EnteredName" class="text-center"></h2>
+</h2></div>
+<div class="mtop col-md-4"> 
+	<input type="text" placeholder="Enter your Name" id="txtName" class="form-control" required><br>
+	<button id="btsubmit" class="btn btn-primary btn-default">Submit</button>
+</div>
+<script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.2.0/firebase.js"></script>
+	<script>
+		var labEnteredName=document.getElementById('EnteredName'),
+		txtName=document.getElementById('txtName'),
+		btnsubmit=document.getElementById('submit'),
+		rootRef=new Firebase('https://rajkumar-1b977.firebaseio.com'),
+		NameRef=rootRef.child('Name');
+		
+		btsubmit.addEventListener('click',function(){
+			NameRef.set(txtName.value);
+			txtName.value='Successfully Inserted';
+			
+		});
+		NameRef.on('value',function(snapshot){
+			labEnteredName.innerText=snapshot.val();
+		});
+	</script>
+</body>
+</html>

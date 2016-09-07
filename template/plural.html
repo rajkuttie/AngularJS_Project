@@ -1,0 +1,23 @@
+<input type="text" ng-model="personCount">
+<h1>
+	<ng-pluralize count="personCount"
+                 when="{'0': 'Nobody is viewing.',
+                     'one': '1 person is viewing.',
+                     'other': '{} people are viewing.'
+                       }">
+</ng-pluralize>
+</h1>
+<br>
+
+<input type="text" ng-model="personCount2">
+<h1>
+
+<ng-pluralize count="personCount2" offset=2
+              when="{'0': 'Nobody is viewing.',
+                     '1': '{{person1}} is viewing.',
+                     '2': '{{person1}} and {{person2}} are viewing.',
+                     'one': '{{person1}}, {{person2}} and one other person are viewing.',
+                     'other': '{{person1}}, {{person2}} and {} other people are viewing.'}">
+</ng-pluralize>
+
+</h1>

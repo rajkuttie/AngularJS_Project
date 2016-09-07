@@ -1,0 +1,49 @@
+<h1>This is directive Page</h1>
+
+
+
+
+Image_Name<input type="text" ng-model="image" name=""><br>
+
+Image_Name<input type="number" ng-model="image" name=""><br>
+Width:<input type="number" ng-model="wid" name=""><br>
+Height:<input type="number" ng-model="hei" name=""><br>
+<heading dif="{{image}}" width="{{wid}}" height="{{hei}}"></heading><br>
+
+<heading></heading>
+<heading></heading>
+<heading></heading>
+<heading></heading>
+<heading></heading>
+
+
+
+
+<book></book>
+
+<item name="Item-1"></item>
+<item name="Item-2"></item>
+<item name="Item-3"></item>
+
+
+<div ng-controller="MessageCtrl">
+
+	<notification message="{{message}}" ></notification>
+
+
+
+
+
+<span>This is the textbox on the directive</span>
+<book-comment passingKey="raj"></book-comment>
+{{raj}}
+
+<span>This is the textbox on the directive</span>
+<book-comment passingKey="commentText"></book-comment>
+{{commentText}}
+
+<like-book like="likeFunction()"></like-book>
+<like-book like="unlikeFunction()"></like-book>
+
+
+</div>
